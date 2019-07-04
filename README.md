@@ -29,3 +29,14 @@ Section "Device"
     Option "TearFree" "on"
 EndSection
 ```
+
+### /etc/X11/xorg.conf.d/20-nvidia.conf
+because of course nvidia has to be special
+```
+Section "Screen"
+    Identifier     "Screen0"
+    Option         "metamodes" "nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+    Option         "AllowIndirectGLXProtocol" "off"
+    Option         "TripleBuffer" "on"
+EndSection
+```
